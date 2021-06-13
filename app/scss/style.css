@@ -1,0 +1,102 @@
+html {
+  overflow-x: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, right top, from(#af67e9), to(#6565e7));
+  background: linear-gradient(90deg, #af67e9, #6565e7);
+  max-width: 100%;
+  min-height: 1vh;
+  font-family: "Kumbh Sans", sans-serif;
+  color: #1d1e35;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  padding: 1.25rem;
+}
+
+.accordion {
+  margin: auto;
+  background-color: white;
+  max-width: 50rem;
+  min-height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.accordion__illustration {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.accordion__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -ms-grid;
+  display: grid;
+  gap: 3.125rem;
+  padding: 6.25rem 6.25rem 6.25rem 0;
+}
+
+.accordion__sections {
+  display: -ms-grid;
+  display: grid;
+  gap: 0.625rem;
+}
+
+.accordion__section {
+  padding: 0.625rem 0;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.accordion__title h1 {
+  font-size: 2.875rem;
+}
+
+.accordion__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 1.25rem;
+  gap: 3.125rem;
+}
+
+.accordion__header h4 {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.accordion__header img {
+  width: 0.625rem;
+  height: 0.5rem;
+}
+
+.accordion__body {
+  padding: 0.625rem 0;
+}
+
+.accordion__body--hidden {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,132 @@
+// ===============  take in pixels, spit out rem value (just for fun)
+
+@function rem($size) {
+    $remSize: $size / 16;
+    @return #{$remSize}rem;
+}
+
+
+//================= Colors
+
+$clr-text: hsl(238, 29%, 16%);
+$clr-text-active: hsl(14, 88%, 65%);
+$clr-divider: hsl(240, 5%, 91%);
+$clr-text-primary: hsl(240, 6%, 50%);
+$clr-text-secondary: hsl(237, 12%, 33%);
+$clr-gradient-1: hsl(273, 75%, 66%);
+$clr-gradient-2: hsl(240, 73%, 65%);
+$clr-accordion-bg: hsl(0, 0%, 100%);
+$shadow-main: rgba(0, 0, 0, 0.308);   
+$gradient-bg: linear-gradient(90deg, $clr-gradient-1, $clr-gradient-2);
+
+//================= Font
+
+$font-main: 'Kumbh Sans', sans-serif;
+
+//================= Font Weights
+
+$weight-regular: 400;
+$weight-bold: 700;
+
+//================= Base
+
+html{
+    overflow-x: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+body{
+    background: $gradient-bg;
+    max-width: 100%;
+    min-height: 1vh;
+    font-family: $font-main;
+    color: $clr-text;
+    font-size: rem(13);
+    line-height: rem(20);
+    padding: rem(20);
+}
+
+
+
+
+
+.accordion{
+    margin: auto ;
+    background-color: $clr-accordion-bg;
+    max-width: rem(800);
+    min-height: rem(400);
+    display: flex;
+    justify-content: space-between;
+
+    &__illustration{
+        flex: 1;
+    }
+
+    &__content{
+        flex:1;
+        display: grid;
+        gap: rem(50);
+        // background-color: navajowhite;
+        padding: rem(100) rem(100) rem(100) 0;
+    }
+
+    &__sections{
+        display: grid;
+        gap: rem(10);
+    }
+
+    &__section{
+        padding: rem(10) 0;
+        border-bottom:  1px solid $clr-divider;
+    }
+
+    &__title{
+        h1{
+            font-size: rem(46);
+        }
+    }
+
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: rem(20);
+        gap: rem(50);
+        // background-color: azure;
+
+        h4{
+            font-size: rem(14);
+            font-weight: $weight-regular;
+            // background: white;
+        }
+
+        img{
+            width: rem(10);
+            height: rem(8);
+        }
+    }
+
+    &__body{
+        // background: palegoldenrod;
+        padding:  rem(10) 0;
+
+        &--hidden{
+            display: none;
+        }
+    }
+
+}
+
+
+
+
+
