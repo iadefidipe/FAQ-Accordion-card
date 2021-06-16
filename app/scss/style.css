@@ -29,6 +29,7 @@ body {
   background-color: white;
   max-width: 50rem;
   min-height: 25rem;
+  border-radius: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,27 +42,39 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  background: url(../../images/bg-pattern-desktop.svg);
+  background-size: 43.75rem 43.75rem;
+  background-repeat: no-repeat;
+  background-position: -25rem -13.125rem;
 }
 
 .accordion__content {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  display: -ms-grid;
-  display: grid;
-  gap: 3.125rem;
-  padding: 6.25rem 6.25rem 6.25rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  background-color: navajowhite;
+  padding: 3.125rem 3.125rem 3.125rem 0;
 }
 
 .accordion__sections {
   display: -ms-grid;
   display: grid;
   gap: 0.625rem;
+  background: yellowgreen;
 }
 
 .accordion__section {
-  padding: 0.625rem 0;
   border-bottom: 1px solid #e7e7e9;
+  background: burlywood;
+}
+
+.accordion__title {
+  background: brown;
+  height: 1.25rem;
 }
 
 .accordion__title h1 {

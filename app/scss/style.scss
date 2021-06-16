@@ -64,32 +64,40 @@ body{
     background-color: $clr-accordion-bg;
     max-width: rem(800);
     min-height: rem(400);
+    border-radius: rem(20);
     display: flex;
     justify-content: space-between;
 
     &__illustration{
         flex: 1;
+        background: url(../../images/bg-pattern-desktop.svg);
+        background-size: rem(700) rem(700);
+        background-repeat: no-repeat;
+        background-position: rem(-400) rem(-210);
     }
 
     &__content{
         flex:1;
-        display: grid;
-        gap: rem(50);
-        // background-color: navajowhite;
-        padding: rem(100) rem(100) rem(100) 0;
+        display: flex;
+        gap: rem(0);
+        background-color: navajowhite;
+        padding: rem(50) rem(50) rem(50) 0;
     }
 
     &__sections{
         display: grid;
         gap: rem(10);
+        background: yellowgreen;
     }
 
     &__section{
-        padding: rem(10) 0;
         border-bottom:  1px solid $clr-divider;
+        background: burlywood;
     }
 
     &__title{
+        background: brown;
+        height: rem(20);
         h1{
             font-size: rem(46);
         }
