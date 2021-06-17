@@ -31,7 +31,7 @@ $weight-bold: 700;
 //================= Base
 
 html{
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 * {
@@ -47,7 +47,7 @@ img {
 body{
     background: $gradient-bg;
     max-width: 100%;
-    min-height: 1vh;
+    min-height: 0vh;
     font-family: $font-main;
     color: $clr-text;
     font-size: rem(13);
@@ -60,46 +60,66 @@ body{
 
 
 .accordion{
-    margin: auto ;
+    margin: rem(150) auto ;
     background-color: $clr-accordion-bg;
     max-width: rem(800);
     min-height: rem(400);
     border-radius: rem(20);
     display: flex;
     justify-content: space-between;
+    overflow-x: hidden;
+
 
     &__illustration{
         flex: 1;
         background: url(../../images/bg-pattern-desktop.svg);
         background-size: rem(700) rem(700);
         background-repeat: no-repeat;
-        background-position: rem(-400) rem(-210);
+        background-position: rem(-370) rem(-210);
+
+        img:first-of-type{
+            position:absolute;
+            width: rem(150);
+            height: rem(150);
+            top: rem(330);
+            transform: translate(-50%);
+            z-index: 10000;
+
+        }
+
+        img:last-of-type{
+            position: relative;
+            
+            transform: translateX(rem(-50)) translateY(rem(50));
+
+        }
+
     }
 
     &__content{
         flex:1;
         display: flex;
-        gap: rem(0);
-        background-color: navajowhite;
+        flex-direction: column;
+        gap: rem(20);
         padding: rem(50) rem(50) rem(50) 0;
     }
 
     &__sections{
         display: grid;
         gap: rem(10);
-        background: yellowgreen;
     }
 
     &__section{
         border-bottom:  1px solid $clr-divider;
-        background: burlywood;
+        
+        padding: rem(10) 0;
     }
 
     &__title{
-        background: brown;
-        height: rem(20);
+        margin-top: rem(30);
         h1{
-            font-size: rem(46);
+            font-size: rem(36);
+            
         }
     }
 
@@ -107,14 +127,14 @@ body{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-right: rem(20);
+        
         gap: rem(50);
-        // background-color: azure;
+        
 
         h4{
             font-size: rem(14);
             font-weight: $weight-regular;
-            // background: white;
+            
         }
 
         img{
@@ -124,7 +144,7 @@ body{
     }
 
     &__body{
-        // background: palegoldenrod;
+        
         padding:  rem(10) 0;
 
         &--hidden{
