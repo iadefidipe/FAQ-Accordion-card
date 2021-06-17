@@ -36,7 +36,17 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .accordion {
+    overflow: visible;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .accordion__illustration {
@@ -44,9 +54,16 @@ body {
       -ms-flex: 1;
           flex: 1;
   background: url(../../images/bg-pattern-desktop.svg);
-  background-size: 43.75rem 43.75rem;
   background-repeat: no-repeat;
+  background-size: 43.75rem 43.75rem;
   background-position: -23.125rem -13.125rem;
+}
+
+@media (max-width: 900px) {
+  .accordion__illustration {
+    background-size: 15.625rem auto;
+    background-position: center -8.75rem;
+  }
 }
 
 .accordion__illustration img:first-of-type {
@@ -59,10 +76,44 @@ body {
   z-index: 10000;
 }
 
+@media (max-width: 900px) {
+  .accordion__illustration img:first-of-type {
+    width: 6.25rem;
+    height: 6.25rem;
+    top: 8.4375rem;
+    left: 32%;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .accordion__illustration img:first-of-type {
+    top: 8.4375rem;
+    left: 23%;
+  }
+}
+
+@media (max-width: 390px) {
+  .accordion__illustration img:first-of-type {
+    top: 8.4375rem;
+    left: 13%;
+  }
+}
+
 .accordion__illustration img:last-of-type {
   position: relative;
   -webkit-transform: translateX(-3.125rem) translateY(3.125rem);
           transform: translateX(-3.125rem) translateY(3.125rem);
+}
+
+@media (max-width: 900px) {
+  .accordion__illustration img:last-of-type {
+    width: 15.625rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-6.875rem);
+            transform: translateX(-50%) translateY(-6.875rem);
+  }
 }
 
 .accordion__content {
@@ -78,6 +129,15 @@ body {
           flex-direction: column;
   gap: 1.25rem;
   padding: 3.125rem 3.125rem 3.125rem 0;
+}
+
+@media (max-width: 900px) {
+  .accordion__content {
+    padding: 0 3.125rem 3.125rem 3.125rem;
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+  }
 }
 
 .accordion__sections {
@@ -97,6 +157,13 @@ body {
 
 .accordion__title h1 {
   font-size: 2.25rem;
+}
+
+@media (max-width: 900px) {
+  .accordion__title {
+    margin-top: 0;
+    text-align: center;
+  }
 }
 
 .accordion__header {

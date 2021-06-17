@@ -1,3 +1,5 @@
+
+
 // ===============  take in pixels, spit out rem value (just for fun)
 
 @function rem($size) {
@@ -5,6 +7,7 @@
     @return #{$remSize}rem;
 }
 
+@import "mixins";
 
 //================= Colors
 
@@ -67,15 +70,25 @@ body{
     border-radius: rem(20);
     display: flex;
     justify-content: space-between;
-    overflow-x: hidden;
+    overflow: hidden;
+
+    @include breakpoint-down(tablet){
+        overflow: visible;
+        flex-direction: column;
+    }
 
 
     &__illustration{
         flex: 1;
         background: url(../../images/bg-pattern-desktop.svg);
-        background-size: rem(700) rem(700);
         background-repeat: no-repeat;
+        background-size: rem(700) rem(700);
         background-position: rem(-370) rem(-210);
+
+        @include breakpoint-down(tablet){
+            background-size: rem(250) auto;
+            background-position: center rem(-140);
+        }
 
         img:first-of-type{
             position:absolute;
@@ -85,12 +98,35 @@ body{
             transform: translate(-50%);
             z-index: 10000;
 
+            @include breakpoint-down(tablet){
+                width: rem(100);
+                height: rem(100);
+                top: rem(135);
+                left: 32% ;
+                transform: translate(0);
+            } 
+
+            @include breakpoint-down(mobile){
+                top: rem(135);
+                left: 23%;
+            } 
+
+            @include breakpoint-down(mobile-mini){
+                top: rem(135);
+                left: 13%;
+            } 
+
         }
 
         img:last-of-type{
             position: relative;
-            
             transform: translateX(rem(-50)) translateY(rem(50));
+
+            @include breakpoint-down(tablet){
+                width: rem(250);
+                left: 50%;
+                transform: translateX(-50%) translateY(rem(-110));
+            }   
 
         }
 
@@ -102,6 +138,11 @@ body{
         flex-direction: column;
         gap: rem(20);
         padding: rem(50) rem(50) rem(50) 0;
+
+        @include breakpoint-down(tablet){
+            padding: 0 rem(50)  rem(50) rem(50);
+            flex: 3;
+        } 
     }
 
     &__sections{
@@ -121,6 +162,11 @@ body{
             font-size: rem(36);
             
         }
+
+        @include breakpoint-down(tablet){
+            margin-top: 0;
+            text-align: center;
+        } 
     }
 
     &__header{
