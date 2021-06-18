@@ -34,7 +34,7 @@ $weight-bold: 700;
 //================= Base
 
 html{
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 * {
@@ -70,10 +70,10 @@ body{
     border-radius: rem(20);
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
+    // overflow: hidden;
 
     @include breakpoint-down(tablet){
-        overflow: visible;
+        // overflow: visible;
         flex-direction: column;
     }
 
@@ -175,11 +175,16 @@ body{
         justify-content: space-between;
         
         gap: rem(50);
+
+        &:hover{
+            cursor: pointer;
+        }
         
 
         h4{
             font-size: rem(14);
             font-weight: $weight-regular;
+            
             
         }
 
@@ -198,6 +203,19 @@ body{
         }
     }
 
+}
+
+.icon-rotate {
+    animation: spin 0.1s linear both;
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(180deg);
+      }
+    }
 }
 
 
