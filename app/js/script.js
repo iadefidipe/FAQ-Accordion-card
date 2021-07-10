@@ -18,18 +18,19 @@ accordionSections.addEventListener('click', function(e){
 
         const dropIcon = clicked.querySelector("img");
 
-        //  if (!dropIcon.classList.contains("icon-rotate")){
-        //    dropIcon.classList.toggle("icon-rotate");
-        //  }else{
-        //    dropIcon.classList.remove("icon-rotate");
-        //  }
+        console.log(dropIcon);
+
+         if (!dropIcon.classList.contains("icon-rotate")){
+           dropIcon.classList.toggle("icon-rotate");
+       } else{
+           dropIcon.classList.remove("icon-rotate");
+         }
 
 
     
 
           const currentBody = document.querySelector(`.accordion__body-${clicked.dataset.accordion}`);
 
-          console.log(currentBody);
           if (currentBody.classList.contains("accordion__body--hidden")){
             accordionBody.forEach((el) =>
               el.classList.add("accordion__body--hidden")
@@ -46,10 +47,10 @@ accordionSections.addEventListener('click', function(e){
             currentBody.classList.add("accordion__body--hidden");
           }
           
-        }
+    }
         
 
-    })
+})
 
 
 
